@@ -270,7 +270,7 @@ body {
 /* Investments Section */
 .investments {
   padding: 5rem 0;
-  background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9)), url("public/images/investments-bg-new.png");
+  background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9)), url("images/investments-bg-new.png");
   background-size: cover;
   background-position: center;
   color: white;
@@ -443,8 +443,6 @@ body {
     display: block;
   }
 
-
-
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -544,8 +542,6 @@ body {
   background: radial-gradient(closest-side, rgba(99, 102, 241, 0.6), rgba(99, 102, 241, 0) 70%);
 }
 
-/* Removed overlap-image class as we're using absolute positioning now */
-
 /* Feature blocks ordering and spacing */
 .feature-column-odd,
 .feature-column-even {
@@ -574,8 +570,6 @@ body {
 .feature-content {
   order: 2; /* En mobile: contenido (título + párrafo) debajo de la imagen */
 }
-
-/* Removed investments-card styles as text is now directly on background */
 
 .investments-image-frame {
   width: 100%;

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us – Energy Capital Management</title>
     <meta name="description" content="Learn more about ECM – our mission, team, and investment philosophy.">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,13 +14,13 @@
         <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #0a4d2e 0%, #1a8f5f 100%);">
             <!-- Imagen de fondo -->
             <div class="absolute inset-0">
-                <img src="public/who-we-are/header.png" alt="Header Background" class="w-full h-full object-cover">
+                <img src="who-we-are/header.png" alt="Header Background" class="w-full h-full object-cover opacity-60">
             </div>
-            <!-- Efectos de luz verde abstractos -->
-            <div class="absolute inset-0">
-                <div class="absolute top-0 right-0 w-96 h-96 bg-green-300 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-                <div class="absolute bottom-0 left-0 w-72 h-72 bg-green-400 rounded-full filter blur-2xl opacity-15"></div>
-                <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-emerald-300 rounded-full filter blur-2xl opacity-10 animate-pulse" style="animation-delay: 1s;"></div>
+            <!-- Efectos de luz para coherencia visual con internas -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="light-effect-1"></div>
+                <div class="light-effect-2"></div>
+                <div class="light-effect-3"></div>
             </div>
 
             <!-- Navegación -->
@@ -49,7 +48,7 @@
                 </div>
             </nav>
 
-            <!-- Menú móvil overlay (fuera de nav para z-index) -->
+            <!-- Menú móvil overlay -->
             <div id="primary-navigation" class="nav-links">
                 <button class="mobile-close-btn" aria-label="Close menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,8 +75,8 @@
         <main class="relative -mt-16 z-20">
             <div class="container max-w-7xl mx-auto px-6">
                 <div class="bg-white p-4 md:p-8 lg:p-12" style="padding-bottom: 10rem;">
-                                         <!-- Contenido con layout similar a la imagen -->
-                     <div class="grid grid-cols-1 lg:grid-cols-10 gap-4 md:gap-8">
+                    <!-- Contenido con layout similar a la imagen -->
+                    <div class="grid grid-cols-1 lg:grid-cols-10 gap-4 md:gap-8">
                         <!-- Columna izquierda: texto principal (60% del ancho) -->
                         <div class="lg:col-span-6 space-y-6">
                             <p class="leading-relaxed font-georgia text-lg md:text-xl lg:text-2xl" style="color: #05351E;">
@@ -107,16 +106,16 @@
                                 
                                 <!-- Columna derecha: 2 imágenes pequeñas (40%) -->
                                 <div class="lg:col-span-2 space-y-2 md:space-y-4">
-                                    <img src="public/who-we-are/3.png" alt="Image 3" class="w-full object-cover shadow-lg">
-                                    <img src="public/who-we-are/4.png" alt="Image 4" class="w-full object-cover shadow-lg">
+                                    <img src="who-we-are/3.png" alt="Image 3" class="w-full object-cover shadow-lg">
+                                    <img src="who-we-are/4.png" alt="Image 4" class="w-full object-cover shadow-lg">
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Columna derecha: imágenes principales (40% del ancho) -->
                         <div class="lg:col-span-4 space-y-4 md:space-y-8">
-                            <img src="public/who-we-are/1.png" alt="Image 1" class="w-full object-cover shadow-lg">
-                            <img src="public/who-we-are/2.png" alt="Image 2" class="w-full object-cover shadow-lg">
+                            <img src="who-we-are/1.png" alt="Image 1" class="w-full object-cover shadow-lg">
+                            <img src="who-we-are/2.png" alt="Image 2" class="w-full object-cover shadow-lg">
                         </div>
                     </div>
                 </div>
@@ -136,8 +135,6 @@
                 </h2>
             </div>
         </section>
-
-
 
         <!-- Footer verde -->
         <footer class="py-8 bg-green-600">

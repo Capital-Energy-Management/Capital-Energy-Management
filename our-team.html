@@ -5,41 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leadership – Energy Capital Management</title>
     <meta name="description" content="Meet the ECM leadership team and their expertise in energy investments.">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="min-h-screen bg-white text-black font-sans">
-
         <!-- HERO -->
         <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #0a4d2e 0%, #1a8f5f 100%);">
             <div class="absolute inset-0">
-                <img src="public/our-team/header.jpg" alt="Header Background" class="w-full h-full object-cover">
+                <img src="our-team/header.jpg" alt="Header Background" class="w-full h-full object-cover">
             </div>
 
-            <div class="absolute inset-0">
-                <div class="absolute top-0 right-0 w-96 h-96 bg-green-300 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-                <div class="absolute bottom-0 left-0 w-72 h-72 bg-green-400 rounded-full filter blur-2xl opacity-15"></div>
-                <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-emerald-300 rounded-full filter blur-2xl opacity-10 animate-pulse"></div>
+            <div class="absolute inset-0 opacity-20">
+                <div class="light-effect-1"></div>
+                <div class="light-effect-2"></div>
+                <div class="light-effect-3"></div>
             </div>
 
             <!-- NAV -->
             <nav class="relative z-10 py-4">
                 <div class="container max-w-7xl mx-auto px-6 flex items-center justify-between">
-                    <a href="index.html">
-                        <img src="images/ecm-logo.png" alt="Energy Capital Management" class="h-10 brightness-0 invert">
-                    </a>
-
-                    <div class="hidden md:flex items-center space-x-8 text-sm">
-                        <a href="index.html" class="text-white">Home</a>
-                        <a href="who-we-are.html" class="text-white">About Us</a>
-                        <a href="how-we-work.html" class="text-white">How We Work</a>
-                        <a href="our-team.html" class="text-white">Leadership</a>
-                        <a href="contact.html" class="text-white">Contact Us</a>
+                    <div class="flex items-center">
+                        <a href="index.html">
+                            <img src="images/ecm-logo.png" alt="Energy Capital Management" class="h-10 w-auto brightness-0 invert">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-btn md:hidden text-white" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-sans">
+                        <a href="index.html" class="text-white hover:opacity-80">Home</a>
+                        <a href="who-we-are.html" class="text-white hover:opacity-80">About Us</a>
+                        <a href="how-we-work.html" class="text-white hover:opacity-80">How We Work</a>
+                        <a href="our-team.html" class="text-white hover:opacity-80">Leadership</a>
+                        <a href="contact.html" class="text-white hover:opacity-80">Contact Us</a>
                     </div>
                 </div>
             </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="primary-navigation" class="nav-links">
+                <button class="mobile-close-btn" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="index.html">Home</a>
+                <a href="who-we-are.html">About Us</a>
+                <a href="how-we-work.html">How We Work</a>
+                <a href="our-team.html">Leadership</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
 
             <div class="relative z-10 py-16 pb-24">
                 <div class="container max-w-7xl mx-auto px-6">
@@ -52,10 +73,8 @@
         <main class="relative -mt-16 z-20">
             <div class="container max-w-7xl mx-auto px-6">
                 <div class="bg-white p-6 md:p-10 lg:p-12" style="padding-bottom:10rem;">
-
                     <!-- TEAM CONTENT -->
                     <div class="max-w-6xl mx-auto">
-
                         <!-- MOBILE -->
                         <div class="md:hidden space-y-6 text-center">
                             <p class="font-georgia text-[18px] leading-relaxed" style="color:#05351E;">
@@ -64,7 +83,7 @@
                             </p>
 
                             <div class="w-56 mx-auto overflow-hidden border-b-8 border-blue-600">
-                                <img src="public/our-team/image 11.png" alt="Jorge Fergie" class="w-full h-auto">
+                                <img src="our-team/image 11.png" alt="Jorge Fergie" class="w-full h-auto">
                             </div>
 
                             <div>
@@ -77,7 +96,7 @@
                         <div class="hidden md:grid grid-cols-12 gap-10 items-center">
                             <div class="col-span-4">
                                 <div class="w-full overflow-hidden border-b-8 border-blue-600">
-                                    <img src="public/our-team/image 11.png" alt="Jorge Fergie" class="w-full h-auto">
+                                    <img src="our-team/image 11.png" alt="Jorge Fergie" class="w-full h-auto">
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="font-bold text-base" style="color:#64687A;">Jorge Fergie</h3>
@@ -85,31 +104,28 @@
                                 </div>
                             </div>
 
-                           <div class="col-span-8">
-    <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
-        Mr. Fergie is the Managing Director of ECM and is based in São Paulo. He brings more than 30 years of experience advising, investing in, and operating across Latin America, with a particular focus on energy, natural resources, infrastructure, and complex, capital-intensive industries.
-    </p>
+                            <div class="col-span-8">
+                                <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
+                                    Mr. Fergie is the Managing Director of ECM and is based in São Paulo. He brings more than 30 years of experience advising, investing in, and operating across Latin America, with a particular focus on energy, natural resources, infrastructure, and complex, capital-intensive industries.
+                                </p>
 
-    <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
-        Throughout his career, Mr. Fergie has led and supported major transformational initiatives for governments and multinational corporations, including operational improvement programs, privatizations, restructurings, and large-scale strategic transformations.
-    </p>
+                                <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
+                                    Throughout his career, Mr. Fergie has led and supported major transformational initiatives for governments and multinational corporations, including operational improvement programs, privatizations, restructurings, and large-scale strategic transformations.
+                                </p>
 
-    <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
-        He spent nearly three decades at McKinsey &amp; Company, where he played a central role in building the firm’s Latin American platform. During his tenure, he led the Media &amp; Telecommunications and Private Equity practices in the region and worked extensively with leading global investors and portfolio companies. He left the firm as a Director Emeritus.
-    </p>
+                                <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
+                                    He spent nearly three decades at McKinsey &amp; Company, where he played a central role in building the firm's Latin American platform. During his tenure, he led the Media &amp; Telecommunications and Private Equity practices in the region and worked extensively with leading global investors and portfolio companies. He left the firm as a Director Emeritus.
+                                </p>
 
-    <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
-        Prior to joining ECM, Mr. Fergie led KKR’s investment activities in Latin America. In this role, he partnered closely with portfolio company management teams to identify, design, and implement value-creation initiatives, with a strong emphasis on operational excellence and strategic execution.
-    </p>
+                                <p class="font-georgia text-[20px] leading-relaxed mb-4" style="color:#05351E; text-align: justify;">
+                                    Prior to joining ECM, Mr. Fergie led KKR's investment activities in Latin America. In this role, he partnered closely with portfolio company management teams to identify, design, and implement value-creation initiatives, with a strong emphasis on operational excellence and strategic execution.
+                                </p>
 
-    <p class="font-georgia text-[20px] leading-relaxed" style="color:#05351E; text-align: justify;">
-        Mr. Fergie holds an M.Sc. in Industrial Engineering from Stanford University.
-    </p>
-</div>
-
+                                <p class="font-georgia text-[20px] leading-relaxed" style="color:#05351E; text-align: justify;">
+                                    Mr. Fergie holds an M.Sc. in Industrial Engineering from Stanford University.
+                                </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -137,7 +153,6 @@
                 <a href="terms-of-service.html" class="hover:text-green-200">Terms of service</a>
             </div>
         </footer>
-
     </div>
 
     <script src="script.js"></script>

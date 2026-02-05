@@ -1,124 +1,186 @@
-// Energy Capital Management - JavaScript functionality
+// Energy Capital Management - Main JavaScript
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Mobile menu toggle
-  const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
-  const mobileCloseBtn = document.querySelector(".mobile-close-btn")
-  const navLinks = document.querySelector(".nav-links")
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+    const primaryNavigation = document.getElementById('primary-navigation');
+    const body = document.body;
 
-  // Abrir menú
-  if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active")
-      mobileMenuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false")
-    })
-  }
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function() {
+        primaryNavigation.classList.add('active');
+        body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    });
 
-  // Cerrar menú
-  if (mobileCloseBtn && navLinks) {
-    mobileCloseBtn.addEventListener("click", () => {
-      navLinks.classList.remove("active")
-      if (mobileMenuBtn) {
-        mobileMenuBtn.setAttribute("aria-expanded", "false")
-      }
-    })
-  }
+    // Close mobile menu
+    mobileCloseBtn.addEventListener('click', function() {
+        primaryNavigation.classList.remove('active');
+        body.style.overflow = ''; // Restore scrolling
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    });
 
-  // Smooth scrolling for navigation links
-  const navLinksItems = document.querySelectorAll('.nav-links a[href^="#"]')
-  navLinksItems.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault()
-      const targetId = this.getAttribute("href")
-      const targetSection = document.querySelector(targetId)
+    // Close menu when clicking on a link
+    const navLinks = primaryNavigation.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            primaryNavigation.classList.remove('active');
+            body.style.overflow = '';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+    });
 
-      if (targetSection) {
-        const headerElement = document.querySelector(".header")
-        const headerHeight = headerElement ? headerElement.offsetHeight : 0
-        const targetPosition = targetSection.offsetTop - headerHeight
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        })
-
-        // Close mobile menu if open
-        if (navLinks) {
-          navLinks.classList.remove("active")
+    // Close menu when clicking outside
+    primaryNavigation.addEventListener('click', function(e) {
+        if (e.target === primaryNavigation) {
+            primaryNavigation.classList.remove('active');
+            body.style.overflow = '';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
         }
-      }
-    })
-  })
+    });
 
-  // Header background on scroll
-  const header = document.querySelector(".header")
-  if (header) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        header.style.background = "rgba(30, 58, 138, 0.95)"
-      } else {
-        header.style.background = "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)"
-      }
-    })
-  }
-
-  // Animate stats on scroll
-  const stats = document.querySelectorAll(".stat-number")
-  const animateStats = () => {
-    stats.forEach((stat) => {
-      const rect = stat.getBoundingClientRect()
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        const finalValue = Number.parseInt(stat.textContent.replace(/[^0-9]/g, ""))
-        animateNumber(stat, 0, finalValue, 2000)
-      }
-    })
-  }
-
-  const animateNumber = (element, start, end, duration) => {
-    const startTime = performance.now()
-    const update = (currentTime) => {
-      const elapsed = currentTime - startTime
-      const progress = Math.min(elapsed / duration, 1)
-      const current = Math.floor(start + (end - start) * progress)
-
-      if (element.textContent.includes("$")) {
-        element.textContent = "$" + current + "B+"
-      } else if (element.textContent.includes("+")) {
-        element.textContent = current + "+"
-      } else {
-        element.textContent = current
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(update)
-      }
+    // Handle contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            let isValid = true;
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#ef4444'; // red-500
+                } else {
+                    field.style.borderColor = ''; // reset
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // In a real application, you would send the data to a server here
+            // For now, we'll just show a success message
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+            
+            // Log data to console (for testing)
+            console.log('Form submitted:', data);
+        });
     }
-    requestAnimationFrame(update)
-  }
 
-  // Trigger stats animation on scroll
-  let statsAnimated = false
-  window.addEventListener("scroll", () => {
-    if (!statsAnimated) {
-      const investmentsSection = document.querySelector(".investments")
-      if (investmentsSection) {
-        const rect = investmentsSection.getBoundingClientRect()
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          animateStats()
-          statsAnimated = true
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#" or external link
+            if (href === '#' || href.includes('http')) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Handle video loading and error states
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        video.addEventListener('error', function() {
+            console.warn('Video failed to load:', video.src);
+            // You could add fallback image logic here
+        });
+        
+        video.addEventListener('loadeddata', function() {
+            console.log('Video loaded successfully:', video.src);
+        });
+    });
+
+    // Add current year to copyright
+    const copyrightElements = document.querySelectorAll('footer span:first-child');
+    const currentYear = new Date().getFullYear();
+    copyrightElements.forEach(element => {
+        if (element.textContent.includes('2026')) {
+            element.textContent = element.textContent.replace('2026', currentYear);
         }
-      }
-    }
-  })
+    });
 
-  // Form handling (if contact form exists)
-  const contactForm = document.querySelector("#contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault()
-      // Add your form submission logic here
-      alert("Thank you for your message! We will get back to you soon.")
-      this.reset()
-    })
-  }
-})
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const src = img.getAttribute('data-src');
+                    if (src) {
+                        img.src = src;
+                        img.removeAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Add loading state to buttons
+    const buttons = document.querySelectorAll('button[type="submit"], .btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (this.type === 'submit' || this.classList.contains('btn')) {
+                this.classList.add('loading');
+                setTimeout(() => {
+                    this.classList.remove('loading');
+                }, 2000);
+            }
+        });
+    });
+});
+
+// Add loading animation to CSS
+const style = document.createElement('style');
+style.textContent = `
+    .loading {
+        position: relative;
+        pointer-events: none;
+    }
+    
+    .loading::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        margin: -10px 0 0 -10px;
+        border: 2px solid rgba(255,255,255,0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);
