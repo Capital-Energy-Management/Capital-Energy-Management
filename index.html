@@ -4,93 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Capital Management</title>
-    <meta name="description" content="Energy Capital Management is a private investment fund focused on Latin America's oil & gas sector.">
-
-    <!-- Tailwind -->
+    <meta name="description" content="Fund solely dedicated to invest across the value net of the oil&gas sector in Latin America.">
+    <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- CSS -->
+    <!-- Fuentes locales: Helvetica Neue LT Pro y Gotham -->
+    <!-- Linking external CSS file instead of inline styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<div class="min-h-screen bg-white text-black font-sans">
+    <div class="min-h-screen bg-black text-white font-sans">
+        <!-- Section 1: Hero with Navigation -->
+        <section class="relative bg-gradient-to-br overflow-hidden pt-4 lg:pt-4 pb-36 md:pb-44 lg:pb-56">
+            <video class="absolute inset-0 w-full h-full object-cover" src="videos/_prompt_animate_202508201334_zstxf.mp4" autoplay muted loop playsinline></video>
+            <div class="hero-gradient-overlay"></div>
 
-<!-- HERO -->
-<section class="relative overflow-hidden"
-    style="background: linear-gradient(135deg, #0a4d2e 0%, #1a8f5f 100%);">
+            <!-- Abstract light effects background -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="light-effect-1"></div>
+                <div class="light-effect-2"></div>
+                <div class="light-effect-3"></div>
+            </div>
 
-    <!-- Imagen de fondo -->
-    <img
-        src="public/home/header.png"
-        alt="Energy Capital Management"
-        class="absolute inset-0 w-full h-full object-cover z-0"
-    >
+            <!-- Navigation -->
+            <nav class="relative z-10 py-6">
+                <div class="container px-6 lg:px-12 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img src="images/ecm-logo.png" alt="Energy Capital Management" class="h-12 w-auto">
+                    </div>
+                    <!-- Mobile burger button -->
+                    <button class="mobile-menu-btn md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
 
-    <!-- Efectos -->
-    <div class="absolute inset-0 z-10 pointer-events-none">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-green-300 rounded-full blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-green-400 rounded-full blur-2xl opacity-15"></div>
-    </div>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-sans">
+                        <a href="index.html" class="text-white hover:opacity-80">Home</a>
+                        <a href="who-we-are.html" class="text-white hover:opacity-80">About Us</a>
+                        <a href="how-we-work.html" class="text-white hover:opacity-80">How We Work</a>
+                        <a href="leadership.html" class="text-white hover:opacity-80">Leadership</a>
+                        <a href="contact.html" class="text-white hover:opacity-80">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
 
-    <!-- NAV -->
-    <nav class="relative z-20 py-4">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html">
-                <img src="public/images/ecm-logo.png" class="h-10 brightness-0 invert">
-            </a>
-
-            <div class="hidden md:flex space-x-8 text-white text-sm">
+            <!-- Mobile Navigation Menu (outside nav for proper z-index) -->
+            <div id="primary-navigation" class="nav-links">
+                <!-- Close button -->
+                <button class="mobile-close-btn" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
                 <a href="index.html">Home</a>
                 <a href="who-we-are.html">About Us</a>
                 <a href="how-we-work.html">How We Work</a>
                 <a href="leadership.html">Leadership</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">Contact Us</a>
             </div>
-        </div>
-    </nav>
 
-    <!-- HERO TEXT -->
-    <div class="relative z-20 py-32 max-w-7xl mx-auto px-6">
-        <h1 class="text-4xl lg:text-6xl font-bold text-[#E7E9DC] max-w-3xl">
-            Investing Across Latin America’s Energy Value Chain
-        </h1>
+            <!-- Hero Content -->
+            <div class="relative z-10 flex items-center min-h-[50vh]">
+                <div class="container px-6 lg:px-12 w-full text-left">
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight font-helvetica">Energy Capital Management</h1>
+                    <p class="text-xl lg:text-2xl text-white leading-relaxed font-georgia mt-12" style="color: rgba(255, 255, 255, 0.9);">
+                        ECM is a private investment fund focused <br> on Latin America's Oil & Gas sector. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Welcome Message with landscape image -->
+        <section id="who-we-are" class="text-black">
+            <div class="relative -mt-24 md:-mt-48 lg:-mt-72 z-50 pb-0 bg-white md:bg-transparent">
+                <div class="container px-6 lg:px-12">
+                    <div class="bg-white p-3 md:p-4 relative z-30 -mb-10 md:-mb-14 lg:-mb-20">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-white p-1 md:p-2">
+                                <div class="aspect-[4/3] overflow-hidden">
+                                    <video class="w-full h-full object-cover" src="videos/Eolico.mp4" autoplay muted loop playsinline></video>
+                                </div>
+                            </div>
+                            <div class="bg-white p-1 md:p-2">
+                                <div class="aspect-[4/3] overflow-hidden">
+                                    <video class="w-full h-full object-cover" src="videos/Plataforma.mp4" autoplay muted loop playsinline></video>
+                                </div>
+                            </div>
+                            <div class="bg-white p-1 md:p-2">
+                                <div class="aspect-[4/3] overflow-hidden">
+                                    <video class="w-full h-full object-cover" src="videos/Gen-4 Turbo animate this image 3691075895.mp4" autoplay muted loop playsinline></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white pt-32 md:pt-36 pb-32">
+                <div class="container px-6 lg:px-12">
+                    <!-- Welcome message full width -->
+                    <div class="border-l-8 pl-6 mb-12" style="border-color: #6CFCAA;">
+                        <h2 class="text-[25.5px] lg:text-[30.6px] xl:text-[40.8px] font-normal text-gray-900 mb-4 font-georgia leading-[1.2]">
+                            We unlock long-term value by investing in companies with strong fundamentals, proven leadership, and scalable operations. At ECM, we combine financial discipline with regional insight to help our partners thrive in evolving energy markets.
+                        </h2>
+                    </div>
+
+                    <!-- Two column layout: text left, space for overlapping image right -->
+                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 items-start">
+                        <!-- Left column: Descriptive text -->
+                        <div class="order-2 xl:order-1">
+                            <div class="max-w-xl">
+                                <p class="text-base text-gray-700 leading-relaxed font-sans mb-8 md:mb-0">
+                                    Founded with a commitment to strategic value creation, ECM brings a deep understanding of the challenges and opportunities across Latin America's energy landscape.
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Right column: Space for overlapping image -->
+                        <div class="relative order-1 xl:order-2">
+                            <!-- This space will be filled by the overlapping image from green section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Investments with overlapping image -->
+        <section id="how-we-work" class="investments relative bg-cover bg-center bg-no-repeat" style="background-image: url('images/investments-bg-new.png');">
+            <div class="container px-6 lg:px-12 relative">
+                <!-- Content grid - Restructured as 2 columns -->
+                <div class="relative z-20 px-6 lg:px-0">
+                    <!-- Main content container -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-start min-h-[35vh] py-8 lg:pb-16">
+                        <!-- Left column: INVERSIONES text -->
+                        <div class="flex items-start justify-start order-1">
+                            <div class="max-w-xl">
+                                <h2 class="text-left text-2xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight tracking-wide font-helvetica">
+                                    We invest in companies at pivotal points in their growth—offering capital, advisory support, and access to our trusted network.
+                                </h2>
+                            </div>
+                        </div>
+
+                        <!-- Right column: Image and text -->
+                        <div class="order-2 lg:-mt-52 xl:-mt-72">
+                            <!-- Image -->
+                            <div class="mb-6 shadow-2xl">
+                                <video class="w-full aspect-[16/10] object-cover" src="videos/_prompt_animate_202508201331_0a6p4.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Text below image -->
+                            <div class="text-left">
+                                <p class="text-white leading-relaxed text-base lg:text-lg font-sans opacity-90">
+                                    Our strategy focuses on high-performing businesses with the potential to lead in operational efficiency, sustainability, and innovation.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Three Feature Blocks -->
+        <section id="our-team" class="py-16 pt-32 relative bg-light-green" style="padding-top: 12vh; padding-bottom: 8vh;">
+            <!-- Blue vertical dividers -->
+            <div class="divider-top"></div>
+            <div class="divider-bottom"></div>
+
+            <div class="container px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[50vh] items-center">
+                    <!-- Column 1 (odd): Gestión Experta - Image top, text bottom -->
+                    <div class="feature-column-odd">
+                        <div class="mb-6 shadow-lg">
+                            <img src="images/ev-charging.jpg" alt="Electric vehicle charging technology" class="w-full aspect-square object-cover">
+                        </div>
+                        <div class="px-4">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">What we do</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-gotham">
+                                We deploy capital in two primary ways: direct equity investment and co-investment via sector-specialized funds. In both cases, we play an active role in guiding company growth—leveraging acquisitions, strategic alliances, and governance support to maximize impact.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 (even): Inversión Objetivo - Text top on desktop, Image top on mobile -->
+                    <div class="feature-column-even">
+                        <div class="feature-content mb-6 px-4">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">How We Work</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-gotham">
+                                Our involvement doesn't end with a capital injection. We partner with management teams to build strong governance frameworks, streamline operations, and position companies for long-term resilience. 
+
+                            </p>
+                        </div>
+                        <div class="feature-image shadow-lg">
+                            <img src="images/oil-worker.jpg" alt="Oil industry worker at sunset" class="w-full aspect-square object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Column 3 (odd): Altos Rendimientos - Image top, text bottom -->
+                    <div class="feature-column-odd">
+                        <div class="mb-6 shadow-lg">
+                            <video class="w-full aspect-square object-cover" src="videos/_prompt_animate_202508201331_5lfr1.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                        <div class="px-4">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4 font-helvetica-neue-pro">Our Focus</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-gotham">
+                                From upstream production to midstream services, ECM's focus spans the full energy value chain. <br>
+
+                                What sets us apart is our ability to combine rigorous investment analysis with real-time understanding of local markets and policy environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: CTA Strip -->
+        <section class="py-16 relative overflow-hidden" style="padding-top: 8vh; padding-bottom: 8vh;">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('images/cta-bg-new.jpg');"></div>
+            <div class="container px-6 lg:px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center lg:justify-between space-y-6 lg:space-y-0">
+                    <div class="max-w-4xl text-center lg:text-left">
+                        <h2 class="text-2xl lg:text-4xl font-bold text-white mb-6 leading-tight" style="font-family: 'Helvetica Neue LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 0;">
+                            To learn more about our investment approach, request partnership information, or connect with our leadership team, contact us.
+                        </h2>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="contact.html" class="btn">Contact our team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Footer -->
+        <footer id="contact-us" class="py-16" style="background: linear-gradient(90deg, #05351E -9.04%, #6CFCAA 100%); padding-top: 4vh; padding-bottom: 4vh;">
+            <div class="container px-6 lg:px-12">
+                <div class="flex items-center justify-center text-sm text-white font-sans">
+                    <span>© 2026, ECM Powered </span>
+                    <span class="mx-4">|</span>
+                    <a href="privacy-policy.html">Privacy policy</a>
+                    <span class="mx-4">|</span>
+                    <a href="terms-of-service.html">Terms of service</a>
+                    <span class="mx-4">|</span>
+                    <a href="#" id="spanish-link">Spanish</a>
+                </div>
+            </div>
+        </footer>
     </div>
-</section>
 
-<!-- CONTENIDO -->
-<main class="relative -mt-16 z-30">
-<div class="max-w-7xl mx-auto px-6 bg-white p-8 lg:p-12">
-
-<div class="grid lg:grid-cols-10 gap-8">
-
-<!-- TEXTO -->
-<div class="lg:col-span-6 space-y-8">
-<p class="font-georgia text-xl text-[#05351E]">
-Energy Capital Management is a private investment fund focused on value creation across the oil & gas sector in Latin America.
-</p>
-
-<p class="text-gray-700 text-sm">
-We partner with management teams to drive operational excellence, long-term growth, and sustainable returns.
-</p>
-</div>
-
-<!-- IMAGEN -->
-<div class="lg:col-span-4">
-<img src="public/home/1.png" class="w-full shadow-lg">
-</div>
-
-</div>
-</div>
-</main>
-
-<!-- FOOTER -->
-<footer class="bg-green-600 py-8 text-center text-white text-sm">
-© 2026, Energy Capital Management
-</footer>
-
-</div>
-
-<script src="script.js"></script>
+    <!-- Linking external JavaScript file instead of inline scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
