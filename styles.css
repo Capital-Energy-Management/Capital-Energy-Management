@@ -3,8 +3,8 @@
 /* Cargar Helvetica Neue LT Pro - múltiples pesos */
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff') format('woff');
+  src: url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
+       url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff') format('woff');
+  src: url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff2') format('woff2'),
+       url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff') format('woff');
+  src: url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
+       url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -30,8 +30,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-BlkEx.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-BlkEx.woff') format('woff');
+  src: url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-BlkEx.woff2') format('woff2'),
+       url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-BlkEx.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('../public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.otf') format('opentype');
+  src: url('fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -48,8 +48,8 @@
 /* Cargar Gotham - múltiples pesos */
 @font-face {
   font-family: 'Gotham';
-  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Book.woff2') format('woff2'),
-       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Book.woff') format('woff');
+  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Book.woff2') format('woff2'),
+       url('fuentes/Gotham-font-family/Gotham/Gotham-Book.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -57,8 +57,8 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff2') format('woff2'),
-       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff') format('woff');
+  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff2') format('woff2'),
+       url('fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -66,8 +66,8 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff2') format('woff2'),
-       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff') format('woff');
+  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff2') format('woff2'),
+       url('fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
