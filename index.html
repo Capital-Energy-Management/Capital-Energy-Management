@@ -11,11 +11,8 @@
 <body>
     <div class="min-h-screen bg-black text-white font-sans">
         <!-- Section 1: Hero with Navigation -->
-        <section class="relative bg-gradient-to-br overflow-hidden pt-4 lg:pt-4 pb-36 md:pb-44 lg:pb-56">
-           <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
-                <source src="videos/_prompt_animate_202508201334_zstxf.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <section class="relative bg-gradient-to-br overflow-hidden pt-4 lg:pt-4 pb-36 md:pb-44 lg:pb-56" style="background: linear-gradient(135deg, #0a1f15 0%, #1a4d2e 50%, #0f3823 100%);">
+           <!-- Fallback gradient background cuando el video no carga -->
             <div class="hero-gradient-overlay"></div>
 
             <div class="absolute inset-0 opacity-20">
@@ -128,7 +125,7 @@
         </section>
 
         <!-- Section 3: Investments -->
-        <section id="how-we-work" class="investments relative bg-cover bg-center bg-no-repeat" style="background-image: url('images/investments-bg-new.png');">
+        <section id="how-we-work" class="investments relative bg-cover bg-center bg-no-repeat" style="background: linear-gradient(135deg, rgba(10, 31, 21, 0.95) 0%, rgba(26, 77, 46, 0.9) 100%), url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1600&q=80'); background-size: cover; background-position: center;">
             <div class="container px-6 lg:px-12 relative">
                 <div class="relative z-20 px-6 lg:px-0">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-start min-h-[35vh] py-8 lg:pb-16">
@@ -142,9 +139,7 @@
 
                         <div class="order-2 lg:-mt-52 xl:-mt-72">
                             <div class="mb-6 shadow-2xl">
-                                <video class="w-full aspect-[16/10] object-cover" autoplay muted loop playsinline>
-                                    <source src="videos/_prompt_animate_202508201331_0a6p4.mp4" type="video/mp4">
-                                </video>
+                                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80" alt="Oil and gas infrastructure" class="w-full aspect-[16/10] object-cover">
                             </div>
                             
                             <div class="text-left">
@@ -165,10 +160,10 @@
 
             <div class="container px-6 lg:px-12">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[50vh] items-center">
-                    <!-- What we do - IMAGEN LOCAL -->
+                    <!-- What we do -->
                     <div class="feature-column-odd">
                         <div class="mb-6 shadow-lg">
-                            <img src="images/ev-charging.jpg" alt="Electric vehicle charging technology" class="w-full aspect-square object-cover">
+                            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="Energy infrastructure investment" class="w-full aspect-square object-cover">
                         </div>
                         <div class="px-4">
                             <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">What we do</h3>
@@ -178,7 +173,7 @@
                         </div>
                     </div>
 
-                    <!-- How We Work - IMAGEN LOCAL -->
+                    <!-- How We Work -->
                     <div class="feature-column-even">
                         <div class="feature-content mb-6 px-4">
                             <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">How We Work</h3>
@@ -187,16 +182,14 @@
                             </p>
                         </div>
                         <div class="feature-image shadow-lg">
-                            <img src="images/oil-worker.jpg" alt="Oil industry worker at sunset" class="w-full aspect-square object-cover">
+                            <img src="https://images.unsplash.com/photo-1569285203735-e93d8d850919?w=600&q=80" alt="Energy sector professionals collaborating" class="w-full aspect-square object-cover">
                         </div>
                     </div>
 
-                    <!-- Our Focus - VIDEO LOCAL -->
+                    <!-- Our Focus -->
                     <div class="feature-column-odd">
                         <div class="mb-6 shadow-lg">
-                            <video class="w-full aspect-square object-cover" autoplay muted loop playsinline>
-                                <source src="videos/_prompt_animate_202508201331_5lfr1.mp4" type="video/mp4">
-                            </video>
+                            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=600&q=80" alt="Oil and gas operations" class="w-full aspect-square object-cover">
                         </div>
                         <div class="px-4">
                             <h3 class="text-3xl font-bold text-gray-900 mb-4 font-helvetica-neue-pro">Our Focus</h3>
@@ -212,7 +205,7 @@
 
         <!-- Section 5: CTA -->
         <section class="py-16 relative overflow-hidden" style="padding-top: 8vh; padding-bottom: 8vh;">
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('images/cta-bg-new.jpg');"></div>
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background: linear-gradient(135deg, rgba(10, 31, 21, 0.85) 0%, rgba(26, 77, 46, 0.75) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80'); background-size: cover; background-position: center;"></div>
             <div class="container px-6 lg:px-12 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center lg:justify-between space-y-6 lg:space-y-0">
                     <div class="max-w-4xl text-center lg:text-left">
