@@ -15,6 +15,7 @@
   "description": "",
   "main": "script.js",
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
     "abbrev": "^1.1.1",
     "agent-base": "^6.0.2",
     "agentkeepalive": "^4.6.0",
