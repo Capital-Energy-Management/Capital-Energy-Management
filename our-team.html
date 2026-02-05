@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team – Energy Capital Management</title>
+    <meta name="description" content="Meet the ECM leadership team and their expertise in energy investments.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="min-h-screen bg-white text-black font-sans">
+        <!-- HERO con fondo verde y efectos de luz -->
+        <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #0a4d2e 0%, #1a8f5f 100%);">
+            <!-- Imagen de fondo -->
+            <div class="absolute inset-0">
+                <img src="public/our-team/header.jpg" alt="Header Background" class="w-full h-full object-cover">
+            </div>
+            <!-- Efectos de luz verde abstractos -->
+            <div class="absolute inset-0">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-green-300 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+                <div class="absolute bottom-0 left-0 w-72 h-72 bg-green-400 rounded-full filter blur-2xl opacity-15"></div>
+                <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-emerald-300 rounded-full filter blur-2xl opacity-10 animate-pulse" style="animation-delay: 1s;"></div>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="relative z-10 py-4">
+                <div class="container max-w-7xl mx-auto px-6 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a href="index.html"><img src="images/ecm-logo.png" alt="Energy Capital Management" class="h-10 w-auto brightness-0 invert"></a>
+                    </div>
+                    <!-- Botón móvil -->
+                    <button class="mobile-menu-btn md:hidden text-white" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <!-- Nav de escritorio -->
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-sans">
+                        <a href="index.html" class="text-white hover:opacity-80">Home</a>
+                        <a href="who-we-are.html" class="text-white hover:opacity-80">About Us</a>
+                        <a href="how-we-work.html" class="text-white hover:opacity-80">How We Work</a>
+                        <a href="our-team.html" class="text-white hover:opacity-80">Leadership</a>
+                        <a href="contact.html" class="text-white hover:opacity-80">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Menú móvil overlay -->
+            <div id="primary-navigation" class="nav-links">
+                <button class="mobile-close-btn" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="index.html">Home</a>
+                <a href="who-we-are.html">About Us</a>
+                <a href="how-we-work.html">How We Work</a>
+                <a href="our-team.html">Leadership</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <!-- Contenido principal del hero -->
+            <div class="relative z-10 py-16 pb-24">
+                <div class="container max-w-7xl mx-auto px-6">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: #E7E9DC;">Our Team</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido principal con caja blanca -->
+        <main class="relative -mt-16 z-20">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="bg-white p-4 md:p-8 lg:p-12" style="padding-bottom: 10rem;">
+                    <!-- Layout del equipo alternado (izquierda / derecha / izquierda) -->
+                    <div class="max-w-6xl mx-auto">
+                        <!-- Mobile order: text then photo per person -->
+                        <div class="md:hidden space-y-10">
+                            <!-- Jorge mobile -->
+                            <div class="space-y-3">
+                                <p class="font-georgia text-[18px] leading-relaxed" style="color:#05351E;">
+                                    ECM Is Led By Jorge Fergie, A Former McKinsey Partner (Private Equity LatAm) And Executive At KKR Brazil. Jorge Brings Over 25 Years Of Experience In Strategic Investment And Operational Transformation.
+                                </p>
+                                <div class="w-48 mx-auto overflow-hidden border-b-8 border-blue-600">
+                                    <img src="public/our-team/image 11.png" alt="Jorge Fergie" class="w-full h-auto">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-bold text-base" style="color:#64687A;">Jorge Fergie</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide">MANAGING DIRECTOR</p>
+                                </div>
+                            </div>
+                            <!-- Victor mobile -->
+                            <div class="space-y-3">
+                                <p class="font-georgia text-[18px] leading-relaxed" style="color:#05351E;">
+                                    He Is Joined By Victor Cervantes, Head Of Finance & Operations, Who Previously Managed Capital Deployment For A Latin American Family Office. Victor Specializes In Fund Structuring, Financial Oversight, And Cross-Border Investments.
+                                </p>
+                                <div class="w-48 mx-auto overflow-hidden border-b-8 border-blue-600">
+                                    <img src="public/our-team/image 12.png" alt="Victor Cervantes" class="w-full h-auto">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-bold text-base" style="color:#64687A;">Victor Cervantes</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide">HEAD OF FINANCE & OPERATIONS</p>
+                                </div>
+                            </div>
+                            <!-- Ana mobile -->
+                            <div class="space-y-3">
+                                <p class="font-georgia text-[18px] leading-relaxed" style="color:#05351E;">
+                                    Ana Sofía Valdés Leads Compliance And Public Affairs. With A Background As An Advisor To The Mexican Congress, She Provides Critical Expertise In Regulation, Stakeholder Engagement, And Regional Policy.
+                                </p>
+                                <div class="w-48 mx-auto overflow-hidden border-b-8 border-blue-600">
+                                    <img src="public/our-team/image 13.png" alt="Ana Sofia Valdés" class="w-full h-auto">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-bold text-base" style="color:#64687A;">Ana Sofia Valdés</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide">HEAD OF COMPLIANCE</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desktop/tablet grid -->
+                        <div class="hidden md:grid grid-cols-12 gap-8">
+                            <!-- Columna izquierda: Jorge y Ana apilados -->
+                            <aside class="col-span-3 space-y-12">
+                                <div>
+                                    <div class="w-full overflow-hidden border-b-8 border-blue-600">
+                                        <img src="public/our-team/image 11.png" alt="Jorge Fergie" class="w-full h-auto">
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="font-bold text-base" style="color:#64687A;">Jorge Fergie</h3>
+                                        <p class="text-xs text-gray-500 uppercase tracking-wide">MANAGING DIRECTOR</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="w-full overflow-hidden border-b-8 border-blue-600">
+                                        <img src="public/our-team/image 13.png" alt="Ana Sofia Valdés" class="w-full h-auto">
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="font-bold text-base" style="color:#64687A;">Ana Sofia Valdés</h3>
+                                        <p class="text-xs text-gray-500 uppercase tracking-wide">HEAD OF COMPLIANCE</p>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <!-- Columna central: textos -->
+                            <section class="col-span-6 space-y-8">
+                                <p class="font-georgia text-[19px] md:text-[20px] leading-relaxed" style="color:#05351E;">
+                                    ECM Is Led By Jorge Fergie, A Former McKinsey Partner (Private Equity LatAm) And Executive At KKR Brazil. Jorge Brings Over 25 Years Of Experience In Strategic Investment And Operational Transformation.
+                                </p>
+                                <p class="font-georgia text-[19px] md:text-[20px] leading-relaxed" style="color:#05351E;">
+                                    He Is Joined By Victor Cervantes, Head Of Finance & Operations, Who Previously Managed Capital Deployment For A Latin American Family Office. Victor Specializes In Fund Structuring, Financial Oversight, And Cross-Border Investments.
+                                </p>
+                                <p class="font-georgia text-[19px] md:text-[20px] leading-relaxed" style="color:#05351E;">
+                                    Ana Sofía Valdés Leads Compliance And Public Affairs. With A Background As An Advisor To The Mexican Congress, She Provides Critical Expertise In Regulation, Stakeholder Engagement, And Regional Policy.
+                                </p>
+                            </section>
+
+                            <!-- Columna derecha: Victor -->
+                            <aside class="col-span-3 flex flex-col justify-center">
+                                <div class="w-full overflow-hidden border-b-8 border-blue-600">
+                                    <img src="public/our-team/image 12.png" alt="Victor Cervantes" class="w-full h-auto">
+                                </div>
+                                <div class="mt-2 text-left">
+                                    <h3 class="font-bold text-base" style="color:#64687A;">Victor Cervantes</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide">HEAD OF FINANCE & OPERATIONS</p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Separador verde -->
+        <div class="relative">
+            <div class="divider-bottom" style="bottom: -60px;"></div>
+        </div>
+        
+        <!-- Sección final con texto centrado -->
+        <section class="py-24 bg-green-800">
+            <div class="container max-w-6xl mx-auto px-6 text-center">
+                <h2 class="font-bold leading-tight text-center" style="font-family: 'Helvetica', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #E7E9DC;">
+                    Energy Capital Management (ECM) Is A Private Investment Fund Focused  On Latin America's Oil & Gas Sector.
+                </h2>
+            </div>
+        </section>
+
+        <!-- Footer verde -->
+        <footer class="py-8 bg-green-600">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="flex items-center justify-center text-sm text-white">
+                    <span>© 2026, ECM Powered</span>
+                    <span class="mx-3">|</span>
+                    <a href="privacy-policy.html" class="hover:text-green-200 transition-colors">Privacy policy</a>
+                    <span class="mx-3">|</span>
+                    <a href="terms-of-service.html" class="hover:text-green-200 transition-colors">Terms of service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

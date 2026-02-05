@@ -5,139 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us – Energy Capital Management</title>
     <meta name="description" content="Learn more about ECM – our mission, team, and investment philosophy.">
-
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<div class="min-h-screen bg-white text-black font-sans">
+    <div class="min-h-screen bg-white text-black font-sans">
+        <!-- HERO con fondo verde y efectos de luz -->
+        <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #0a4d2e 0%, #1a8f5f 100%);">
+            <!-- Imagen de fondo -->
+            <div class="absolute inset-0">
+                <img src="public/who-we-are/header.png" alt="Header Background" class="w-full h-full object-cover">
+            </div>
+            <!-- Efectos de luz verde abstractos -->
+            <div class="absolute inset-0">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-green-300 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+                <div class="absolute bottom-0 left-0 w-72 h-72 bg-green-400 rounded-full filter blur-2xl opacity-15"></div>
+                <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-emerald-300 rounded-full filter blur-2xl opacity-10 animate-pulse" style="animation-delay: 1s;"></div>
+            </div>
 
-<!-- HERO -->
-<section class="relative overflow-hidden"
-    style="background: linear-gradient(135deg, #0a4d2e 0%, #1a8f5f 100%);">
+            <!-- Navegación -->
+            <nav class="relative z-10 py-4">
+                <div class="container max-w-7xl mx-auto px-6 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a href="index.html"><img src="images/ecm-logo.png" alt="Energy Capital Management" class="h-10 w-auto brightness-0 invert"></a>
+                    </div>
+                    <!-- Botón móvil -->
+                    <button class="mobile-menu-btn md:hidden text-white" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <!-- Nav de escritorio -->
+                    <div class="hidden md:flex items-center space-x-8 text-sm font-sans">
+                        <a href="index.html" class="text-white hover:opacity-80">Home</a>
+                        <a href="who-we-are.html" class="text-white hover:opacity-80">About Us</a>
+                        <a href="how-we-work.html" class="text-white hover:opacity-80">How We Work</a>
+                        <a href="our-team.html" class="text-white hover:opacity-80">Leadership</a>
+                        <a href="contact.html" class="text-white hover:opacity-80">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
 
-    <!-- Imagen de fondo -->
-    <img
-        src="public/who-we-are/header.png"
-        alt="Header Background"
-        class="absolute inset-0 w-full h-full object-cover z-0"
-    >
-
-    <!-- Efectos -->
-    <div class="absolute inset-0 z-10">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-green-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-green-400 rounded-full blur-2xl opacity-15"></div>
-        <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-emerald-300 rounded-full blur-2xl opacity-10 animate-pulse" style="animation-delay:1s;"></div>
-    </div>
-
-    <!-- NAV -->
-    <nav class="relative z-20 py-4">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="index.html">
-                <img src="public/images/ecm-logo.png" class="h-10 brightness-0 invert">
-            </a>
-
-            <button class="mobile-menu-btn md:hidden text-white" aria-label="Open menu">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-
-            <div class="hidden md:flex space-x-8 text-white text-sm">
+            <!-- Menú móvil overlay (fuera de nav para z-index) -->
+            <div id="primary-navigation" class="nav-links">
+                <button class="mobile-close-btn" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
                 <a href="index.html">Home</a>
                 <a href="who-we-are.html">About Us</a>
                 <a href="how-we-work.html">How We Work</a>
-                <a href="leadership.html">Leadership</a>
-                <a href="contact.html">Contact</a>
+                <a href="our-team.html">Leadership</a>
+                <a href="contact.html">Contact Us</a>
             </div>
+
+            <!-- Contenido principal del hero -->
+            <div class="relative z-10 py-16 pb-24">
+                <div class="container max-w-7xl mx-auto px-6">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4" style="color: #E7E9DC;">About Us</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido principal con caja blanca -->
+        <main class="relative -mt-16 z-20">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="bg-white p-4 md:p-8 lg:p-12" style="padding-bottom: 10rem;">
+                                         <!-- Contenido con layout similar a la imagen -->
+                     <div class="grid grid-cols-1 lg:grid-cols-10 gap-4 md:gap-8">
+                        <!-- Columna izquierda: texto principal (60% del ancho) -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <p class="leading-relaxed font-georgia text-lg md:text-xl lg:text-2xl" style="color: #05351E;">
+                                Founded With A Commitment To Strategic Value Creation, ECM Brings A Deep Understanding Of The Challenges And Opportunities Across Latin America's Energy Landscape. We Invest In Companies At Pivotal Points In Their Growth—Offering Capital, Advisory Support, And Access To Our Trusted Network.
+                            </p>
+                            
+                            <!-- Sub-grid para "Our team" + "What we do" con imágenes -->
+                            <div class="mt-8 md:mt-12 grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8">
+                                <!-- Columna izquierda: textos Our team + What we do (60%) -->
+                                <div class="lg:col-span-3 space-y-4 md:space-y-8">
+                                    <div class="border-l-8 border-blue-600" style="padding-left: 0.75rem;">
+                                        <p class="leading-relaxed mb-4 md:mb-8 font-georgia text-sm md:text-base" style="color: #05351E;">
+                                            Our Team Is Composed Of Seasoned Professionals With Backgrounds In Private Equity, Operations, And Public Policy. This Multidisciplinary Foundation Allows Us To Engage With Portfolio Companies In A Hands-On, Collaborative Manner. With Offices In São Paulo And Mexico City, We Maintain A Close Presence In The Region's Most Dynamic Energy Markets.
+                                        </p>
+                                    </div>
+                                    
+                                    <div>
+                                        <h2 class="font-bold mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl" style="font-family: 'Helvetica Neue LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;">WHAT WE DO</h2>
+                                        <p class="text-gray-700 leading-relaxed" style="font-family: 'Lato', sans-serif; font-size: 11.2px;">
+                                            ECM's Approach Is Built On A Long-Term Vision. We Understand That Energy Projects Require Time To Mature, And We Align Our Investments Accordingly. Our Strategy Focuses On High-Performing Businesses With The Potential To Lead In Operational Efficiency, Sustainability, And Innovation.
+                                        </p>
+                                        <p class="text-gray-700 leading-relaxed mt-2 md:mt-4" style="font-family: 'Lato', sans-serif; font-size: 11.2px;">
+                                            We Deploy Capital In Two Primary Ways: Direct Equity Investment And Co-Investment Via Sector-Specialized Funds. In Both Cases, We Play An Active Role In Guiding Company Growth—Leveraging Acquisitions, Strategic Alliances, And Governance Support To Maximize Impact.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Columna derecha: 2 imágenes pequeñas (40%) -->
+                                <div class="lg:col-span-2 space-y-2 md:space-y-4">
+                                    <img src="public/who-we-are/3.png" alt="Image 3" class="w-full object-cover shadow-lg">
+                                    <img src="public/who-we-are/4.png" alt="Image 4" class="w-full object-cover shadow-lg">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Columna derecha: imágenes principales (40% del ancho) -->
+                        <div class="lg:col-span-4 space-y-4 md:space-y-8">
+                            <img src="public/who-we-are/1.png" alt="Image 1" class="w-full object-cover shadow-lg">
+                            <img src="public/who-we-are/2.png" alt="Image 2" class="w-full object-cover shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Separador verde -->
+        <div class="relative">
+            <div class="divider-bottom" style="bottom: -60px;"></div>
         </div>
-    </nav>
+        
+        <!-- Sección final con texto centrado -->
+        <section class="py-24 bg-green-800">
+            <div class="container max-w-6xl mx-auto px-6 text-center">
+                <h2 class="font-bold leading-tight text-center" style="font-family: 'Helvetica', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #E7E9DC;">
+                    Energy Capital Management (ECM) Is A Private Investment Fund Focused  On Latin America's Oil & Gas Sector.
+                </h2>
+            </div>
+        </section>
 
-    <!-- Mobile menu -->
-    <div id="primary-navigation" class="nav-links">
-        <button class="mobile-close-btn" aria-label="Close menu">✕</button>
-        <a href="index.html">Home</a>
-        <a href="who-we-are.html">About Us</a>
-        <a href="how-we-work.html">How We Work</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="contact.html">Contact</a>
+
+
+        <!-- Footer verde -->
+        <footer class="py-8 bg-green-600">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="flex items-center justify-center text-sm text-white">
+                    <span>© 2026, ECM Powered</span>
+                    <span class="mx-3">|</span>
+                    <a href="privacy-policy.html" class="hover:text-green-200 transition-colors">Privacy policy</a>
+                    <span class="mx-3">|</span>
+                    <a href="terms-of-service.html" class="hover:text-green-200 transition-colors">Terms of service</a>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <!-- Título -->
-    <div class="relative z-20 py-16 pb-24 max-w-7xl mx-auto px-6">
-        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-[#E7E9DC]">
-            About Us
-        </h1>
-    </div>
-</section>
-
-<!-- CONTENIDO -->
-<main class="relative -mt-16 z-30">
-<div class="max-w-7xl mx-auto px-6 bg-white p-4 md:p-8 lg:p-12 pb-40">
-
-<div class="grid grid-cols-1 lg:grid-cols-10 gap-8">
-
-<!-- TEXTO -->
-<div class="lg:col-span-6 space-y-6">
-<p class="font-georgia text-lg md:text-xl lg:text-2xl text-[#05351E] leading-relaxed">
-Founded With A Commitment To Strategic Value Creation, ECM Brings A Deep Understanding Of The Challenges And Opportunities Across Latin America's Energy Landscape.
-</p>
-
-<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
-
-<div class="lg:col-span-3 space-y-8">
-<div class="border-l-8 border-blue-600 pl-3">
-<p class="font-georgia text-sm md:text-base text-[#05351E]">
-Our Team Is Composed Of Seasoned Professionals With Backgrounds In Private Equity, Operations, And Public Policy.
-</p>
-</div>
-
-<h2 class="font-helvetica-neue-pro font-bold text-xl lg:text-2xl">
-WHAT WE DO
-</h2>
-
-<p class="text-gray-700 text-sm leading-relaxed">
-ECM's Approach Is Built On A Long-Term Vision Focused On High-Performing Businesses With Sustainable Growth Potential.
-</p>
-</div>
-
-<div class="lg:col-span-2 space-y-4">
-<img src="public/who-we-are/3.png" class="w-full shadow-lg">
-<img src="public/who-we-are/4.png" class="w-full shadow-lg">
-</div>
-</div>
-</div>
-
-<!-- IMÁGENES -->
-<div class="lg:col-span-4 space-y-8">
-<img src="public/who-we-are/1.png" class="w-full shadow-lg">
-<img src="public/who-we-are/2.png" class="w-full shadow-lg">
-</div>
-
-</div>
-</div>
-</main>
-
-<!-- CTA -->
-<section class="py-24 bg-green-800 text-center">
-<h2 class="font-bold text-2xl lg:text-3xl text-[#E7E9DC] max-w-4xl mx-auto px-6">
-Energy Capital Management (ECM) Is A Private Investment Fund Focused On Latin America's Oil & Gas Sector.
-</h2>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-green-600 py-8 text-center text-white text-sm">
-© 2026, Energy Capital Management
-</footer>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

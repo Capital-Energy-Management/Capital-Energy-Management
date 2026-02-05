@@ -1,10 +1,10 @@
 /* Energy Capital Management - Main Styles */
 
-/* Load Helvetica Neue LT Pro fonts */
+/* Cargar Helvetica Neue LT Pro - múltiples pesos */
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
-       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Roman.woff') format('woff');
+  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
+       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Md.woff2') format('woff2'),
-       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Md.woff') format('woff');
+  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff2') format('woff2'),
+       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
-       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Blk.woff') format('woff');
+  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
+       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -30,8 +30,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-BlkEx.woff2') format('woff2'),
-       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-BlkEx.woff') format('woff');
+  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-BlkEx.woff2') format('woff2'),
+       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-BlkEx.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -39,17 +39,17 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Blk.otf') format('opentype');
+  src: url('../public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* Load Gotham fonts */
+/* Cargar Gotham - múltiples pesos */
 @font-face {
   font-family: 'Gotham';
-  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Book.woff2') format('woff2'),
-       url('fuentes/Gotham-font-family/Gotham/Gotham-Book.woff') format('woff');
+  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Book.woff2') format('woff2'),
+       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Book.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -57,8 +57,8 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff2') format('woff2'),
-       url('fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff') format('woff');
+  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff2') format('woff2'),
+       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -66,8 +66,8 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff2') format('woff2'),
-       url('fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff') format('woff');
+  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff2') format('woff2'),
+       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -85,6 +85,7 @@ body {
   color: #333;
 }
 
+/* Usar Gotham como fuente principal para elementos con clase font-sans */
 .font-sans {
   font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 400;
@@ -96,6 +97,7 @@ body {
   padding: 0 20px;
 }
 
+/* Header Styles */
 .header {
   background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   color: white;
@@ -134,6 +136,7 @@ body {
   opacity: 0.8;
 }
 
+/* Hero Section */
 .hero {
   background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url("images/header-bg.png");
   background-size: cover;
@@ -178,6 +181,7 @@ body {
   background: #073d23;
 }
 
+/* About Section */
 .about {
   padding: 5rem 0;
   background: #f8fafc;
@@ -217,6 +221,7 @@ body {
   color: #1e3a8a;
 }
 
+/* Services Section */
 .services {
   padding: 5rem 0;
 }
@@ -262,6 +267,7 @@ body {
   color: #1e3a8a;
 }
 
+/* Investments Section */
 .investments {
   padding: 5rem 0;
   background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9)), url("images/investments-bg-new.png");
@@ -298,6 +304,7 @@ body {
   margin-top: 0.5rem;
 }
 
+/* CTA Section */
 .cta {
   padding: 5rem 0;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/cta-bg.png");
@@ -320,6 +327,7 @@ body {
   margin-right: auto;
 }
 
+/* Footer */
 .footer {
   background: #1f2937;
   color: white;
@@ -363,6 +371,7 @@ body {
   color: #9ca3af;
 }
 
+/* Mobile Menu */
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -374,6 +383,7 @@ body {
   position: relative;
 }
 
+/* Mobile Navigation */
 .nav-links {
   display: none;
   position: fixed;
@@ -413,6 +423,7 @@ body {
   background: rgba(108, 252, 170, 0.1);
 }
 
+/* Botón cerrar menú móvil */
 .mobile-close-btn {
   position: absolute;
   top: 20px;
@@ -426,10 +437,13 @@ body {
   z-index: 999999999;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
   }
+
+
 
   .hero h1 {
     font-size: 2.5rem;
@@ -466,10 +480,14 @@ body {
   }
 }
 
+/* ===== Custom classes to support current HTML structure ===== */
+
+/* Beige section background (features area) */
 .bg-light-green {
-  background-color: #edeadf;
+  background-color: #edeadf; /* tono beige claro similar al diseño */
 }
 
+/* Decorative vertical dividers inside green section */
 .divider-top,
 .divider-bottom {
   position: absolute;
@@ -491,6 +509,7 @@ body {
   bottom: -20px;
 }
 
+/* Glowing light effects for the hero */
 .light-effect-1,
 .light-effect-2,
 .light-effect-3 {
@@ -525,31 +544,38 @@ body {
   background: radial-gradient(closest-side, rgba(99, 102, 241, 0.6), rgba(99, 102, 241, 0) 70%);
 }
 
+/* Removed overlap-image class as we're using absolute positioning now */
+
+/* Feature blocks ordering and spacing */
 .feature-column-odd,
 .feature-column-even {
   display: flex;
   flex-direction: column;
 }
 
+/* Efecto sube y baja en desktop */
 @media (min-width: 1024px) {
   .feature-column-odd {
-    padding-bottom: 6rem;
-    justify-content: center;
+    padding-bottom: 6rem; /* Columnas 1 y 3 bajan */
+    justify-content: center; /* Centrado vertical */
   }
   
   .feature-column-even {
-    padding-top: 12rem;
-    justify-content: center;
+    padding-top: 12rem; /* Columna 2 sube - doble padding */
+    justify-content: center; /* Centrado vertical */
   }
   
+  /* Ajuste específico para la columna 3 - doble padding para bajar */
   .feature-column-odd:nth-child(3) {
     padding-top: 28vh;
   }
 }
 
 .feature-content {
-  order: 2;
+  order: 2; /* En mobile: contenido (título + párrafo) debajo de la imagen */
 }
+
+/* Removed investments-card styles as text is now directly on background */
 
 .investments-image-frame {
   width: 100%;
@@ -568,18 +594,19 @@ body {
 }
 
 .feature-image {
-  order: 1;
+  order: 1; /* En mobile: imagen primero */
 }
 
 @media (min-width: 1024px) {
   .feature-column-even .feature-content {
-    order: 1;
+    order: 1; /* En desktop: texto primero para la columna par */
   }
   .feature-column-even .feature-image {
-    order: 2;
+    order: 2; /* En desktop: imagen debajo para la columna par */
   }
 }
 
+/* Font helpers */
 .font-helvetica {
   font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -599,15 +626,18 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+/* Overlay para oscurecer desde la mitad del hero hacia abajo */
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  /* Degradado transparente a negro de izquierda a derecha */
   background: linear-gradient(to left, rgb(0 0 0 / 38%) 39%, rgb(0 0 0) 68%, rgb(0 0 0) 100%);
   mix-blend-mode: multiply;
   z-index: 1;
 }
 
+/* Estilos para mejorar el comportamiento de videos en loop */
 video {
   display: block;
   will-change: transform;
@@ -617,11 +647,13 @@ video {
   -webkit-transform: translateZ(0);
 }
 
+/* Suavizar transiciones de video para evitar saltos visuales */
 video[loop] {
   image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
 }
 
+/* Contenedores de video con aspecto fijo para evitar reinicios visuales */
 .aspect-\[4\/3\] video,
 .aspect-square video {
   position: absolute;
@@ -641,9 +673,9 @@ video[loop] {
 }
 
 .aspect-\[4\/3\] {
-  padding-bottom: 75%;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
 }
 
 .aspect-square {
-  padding-bottom: 100%;
+  padding-bottom: 100%; /* 1:1 aspect ratio */
 }
