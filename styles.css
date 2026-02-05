@@ -1,9 +1,10 @@
 /* Energy Capital Management - Main Styles */
 
+/* Load Helvetica Neue LT Pro fonts */
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Roman.woff') format('woff');
+  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
+       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Roman.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,8 +12,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Md.woff') format('woff');
+  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Md.woff2') format('woff2'),
+       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Md.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -20,18 +21,54 @@
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
-  src: url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
-       url('public/fuentes/Helvetica Neue LT Pro/HelveticaNeueLTPro-Blk.woff') format('woff');
+  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
+       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Blk.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-BlkEx.woff2') format('woff2'),
+       url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-BlkEx.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('fuentes/Helvetica%20Neue%20LT%20Pro/HelveticaNeueLTPro-Blk.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Load Gotham fonts */
+@font-face {
   font-family: 'Gotham';
-  src: url('public/fuentes/Gotham-font-family/Gotham/Gotham-Book.woff2') format('woff2'),
-       url('public/fuentes/Gotham-font-family/Gotham/Gotham-Book.woff') format('woff');
+  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Book.woff2') format('woff2'),
+       url('fuentes/Gotham-font-family/Gotham/Gotham-Book.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff2') format('woff2'),
+       url('fuentes/Gotham-font-family/Gotham/Gotham-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff2') format('woff2'),
+       url('fuentes/Gotham-font-family/Gotham/Gotham-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -49,37 +86,564 @@ body {
 }
 
 .font-sans {
-  font-family: "Gotham", sans-serif;
+  font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
 }
 
-.font-georgia {
-  font-family: Georgia, "Times New Roman", serif;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.font-helvetica-neue-pro {
-  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-/* Mobile menu */
-.nav-links {
-  display: none;
-}
-
-.nav-links.active {
-  display: flex;
+.header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  padding: 1rem 0;
   position: fixed;
-  inset: 0;
-  background: #05351E;
-  flex-direction: column;
-  justify-content: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  z-index: 9999;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
 .nav-links a {
   color: white;
-  font-size: 20px;
-  padding: 20px;
   text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url("images/header-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #05351E;
+  border: 3px solid #6CFCAA;
+  color: white;
+  text-decoration: none;
+  font-family: "Helvetica Neue LT Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 750;
+  font-size: 18px;
+  line-height: 33px;
+  letter-spacing: 0%;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #073d23;
+}
+
+.about {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1e3a8a;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.services {
+  padding: 5rem 0;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1e3a8a;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.investments {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9)), url("images/investments-bg-new.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.investments h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.investments-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fbbf24;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.cta {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/cta-bg.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  color: #fbbf24;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fbbf24;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 1rem;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  position: relative;
+}
+
+.nav-links {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #05351E;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  z-index: 999999999;
+  color: white;
+  font-family: "Helvetica Neue LT Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.active {
+  display: flex;
+  transform: translateX(0);
+}
+
+.nav-links a {
+  display: block;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: "Helvetica Neue LT Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(108, 252, 170, 0.1);
+}
+
+.mobile-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 999999999;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .about h2,
+  .services h2,
+  .investments h2,
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .about-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bg-light-green {
+  background-color: #edeadf;
+}
+
+.divider-top,
+.divider-bottom {
+  position: absolute;
+  left: 50%;
+  width: 8px;
+  height: 120px;
+  background: #6CFCAA;
+  transform: translateX(-50%);
+  border-radius: 0;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+.divider-top {
+  top: -20px;
+}
+
+.divider-bottom {
+  bottom: -20px;
+}
+
+.light-effect-1,
+.light-effect-2,
+.light-effect-3 {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.light-effect-1 {
+  top: 10%;
+  left: 5%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(closest-side, rgba(59, 130, 246, 0.6), rgba(59, 130, 246, 0) 70%);
+}
+
+.light-effect-2 {
+  bottom: 15%;
+  right: 10%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(closest-side, rgba(16, 185, 129, 0.6), rgba(16, 185, 129, 0) 70%);
+}
+
+.light-effect-3 {
+  top: 35%;
+  right: 35%;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(closest-side, rgba(99, 102, 241, 0.6), rgba(99, 102, 241, 0) 70%);
+}
+
+.feature-column-odd,
+.feature-column-even {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .feature-column-odd {
+    padding-bottom: 6rem;
+    justify-content: center;
+  }
+  
+  .feature-column-even {
+    padding-top: 12rem;
+    justify-content: center;
+  }
+  
+  .feature-column-odd:nth-child(3) {
+    padding-top: 28vh;
+  }
+}
+
+.feature-content {
+  order: 2;
+}
+
+.investments-image-frame {
+  width: 100%;
+  max-width: 520px;
+}
+
+.investments-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.investments-caption {
+  max-width: 560px;
+  margin-left: 4px;
+}
+
+.feature-image {
+  order: 1;
+}
+
+@media (min-width: 1024px) {
+  .feature-column-even .feature-content {
+    order: 1;
+  }
+  .feature-column-even .feature-image {
+    order: 2;
+  }
+}
+
+.font-helvetica {
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.font-helvetica-neue-pro {
+  font-family: "Helvetica Neue LT Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.font-gotham {
+  font-family: "Gotham", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+}
+
+.font-georgia {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to left, rgb(0 0 0 / 38%) 39%, rgb(0 0 0) 68%, rgb(0 0 0) 100%);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+video {
+  display: block;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+video[loop] {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.aspect-\[4\/3\] video,
+.aspect-square video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.aspect-\[4\/3\],
+.aspect-square {
+  position: relative;
+  overflow: hidden;
+}
+
+.aspect-\[4\/3\] {
+  padding-bottom: 75%;
+}
+
+.aspect-square {
+  padding-bottom: 100%;
 }
