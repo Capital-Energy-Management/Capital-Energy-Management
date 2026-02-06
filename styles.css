@@ -713,3 +713,19 @@ video[loop] {
     flex-direction: column-reverse;
   }
 }
+/* Mejoras para imagen del team */
+.team-member-photo {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(1.05) brightness(1.02);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Aumentar tamaño en desktop */
+@media (min-width: 768px) {
+  .col-span-4 {
+    max-width: 400px;
+  }
+}
