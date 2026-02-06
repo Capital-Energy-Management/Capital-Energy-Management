@@ -8,37 +8,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
 
     // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function() {
-        primaryNavigation.classList.add('active');
-        body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        mobileMenuBtn.setAttribute('aria-expanded', 'true');
-    });
+    if (mobileMenuBtn && primaryNavigation) {
+        mobileMenuBtn.addEventListener('click', function() {
+            primaryNavigation.classList.add('active');
+            body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        });
+    }
 
     // Close mobile menu
-    mobileCloseBtn.addEventListener('click', function() {
-        primaryNavigation.classList.remove('active');
-        body.style.overflow = ''; // Restore scrolling
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-    });
-
-    // Close menu when clicking on a link
-    const navLinks = primaryNavigation.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+    if (mobileCloseBtn && primaryNavigation) {
+        mobileCloseBtn.addEventListener('click', function() {
             primaryNavigation.classList.remove('active');
-            body.style.overflow = '';
+            body.style.overflow = ''; // Restore scrolling
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
         });
-    });
+    }
 
-    // Close menu when clicking outside
-    primaryNavigation.addEventListener('click', function(e) {
-        if (e.target === primaryNavigation) {
-            primaryNavigation.classList.remove('active');
-            body.style.overflow = '';
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        }
-    });
+    // Close menu when clicking on a link
+    if (primaryNavigation) {
+        const navLinks = primaryNavigation.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                primaryNavigation.classList.remove('active');
+                body.style.overflow = '';
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        primaryNavigation.addEventListener('click', function(e) {
+            if (e.target === primaryNavigation) {
+                primaryNavigation.classList.remove('active');
+                body.style.overflow = '';
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+    }
 
     // Handle contact form submission
     const contactForm = document.getElementById('contact-form');
@@ -103,13 +113,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle video loading and error states
     const videos = document.querySelectorAll('video');
     videos.forEach(video => {
-        video.addEventListener('error', function() {
-            console.warn('Video failed to load:', video.src);
-            // You could add fallback image logic here
+        video.addEventListener('error', function(e) {
+            console.warn('Video failed to load:', this.src);
+            // Hide video container or show fallback
+            const videoContainer = this.closest('.video-container');
+            if (videoContainer) {
+                videoContainer.style.backgroundColor = '#1a1a1a';
+            }
         });
         
         video.addEventListener('loadeddata', function() {
-            console.log('Video loaded successfully:', video.src);
+            console.log('Video loaded successfully');
         });
     });
 
@@ -146,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading state to buttons
     const buttons = document.querySelectorAll('button[type="submit"], .btn');
     buttons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
             if (this.type === 'submit' || this.classList.contains('btn')) {
                 this.classList.add('loading');
                 setTimeout(() => {
