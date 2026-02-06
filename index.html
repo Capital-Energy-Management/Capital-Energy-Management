@@ -1,40 +1,3 @@
-<think>
-Primero, el usuario dice: "ayudame a corregir, en mi index, hay tres videos que no se ven aparecen en blanco What we do, How We Work, Our Focus, https://picsum.photos/800/500?random=4, tiene este recurso, puedes revisar y arreglarlo"
-
-
-## Interpreting User Request  
-- The user reported an issue with their index page, where three videos appear blank: "What we do," "How We Work," and "Our Focus."  
-- They provided a URL (https://picsum.photos/800/500?random=4), which seems unrelated to the videos, possibly a placeholder or error.
-</think>A continuación, te ayudo a corregir el problema que describes. He revisado el código HTML y CSS que proporcionaste. El issue principal es que en la "Section 4: Three Feature Blocks" (que corresponde a las secciones "What we do", "How We Work" y "Our Focus"), los elementos `<video>` están intentando cargar una fuente de video desde `https://picsum.photos/800/500?random=4`, pero **Picsum Photos es un servicio de imágenes aleatorias, no de videos**. Por eso, los videos no se reproducen y aparecen en blanco (o no cargan nada).
-
-### Análisis y correcciones realizadas:
-1. **Problema identificado**:
-   - Los `<video>` en esas secciones usan `<source src="https://picsum.photos/800/500?random=4" type="video/mp4">`, lo cual no es válido porque esa URL devuelve una imagen JPEG, no un archivo MP4.
-   - Esto hace que el navegador no pueda reproducir nada, resultando en un área en blanco.
-   - Los otros videos en "Section 2" (como `videos/Eolico.mp4`) sí usan archivos locales válidos, por lo que funcionan correctamente.
-
-2. **Solución aplicada**:
-   - **Cambié los `<video>` por `<img>`**: Dado que la URL proporcionada es de una imagen (y no hay videos disponibles en Picsum), reemplacé los elementos `<video>` con `<img>` para usar la imagen aleatoria de Picsum. Esto asegura que se muestre algo visual (una imagen placeholder) en lugar de un espacio en blanco.
-     - Agregué un `alt` descriptivo a cada `<img>` para accesibilidad.
-     - Mantuve las clases CSS (`w-full aspect-square object-cover`) para que el diseño se vea consistente.
-   - Si prefieres videos reales, necesitarías subir videos locales (como los de "Section 2") o usar URLs de videos válidos (ej. de un CDN como Vimeo o YouTube embeds, pero eso complicaría el código). Por ahora, opté por imágenes para una corrección rápida y funcional.
-   - **Nota**: Si tienes videos específicos para estas secciones, reemplaza las `<img>` por `<video>` con las rutas correctas (ej. `videos/what-we-do.mp4`).
-
-3. **Ajustes en CSS**:
-   - El CSS ya tiene estilos para `.aspect-square` que funcionan bien con `<img>` (ya que usa `padding-bottom: 100%` para mantener la proporción cuadrada y `object-fit: cover` para el ajuste).
-   - Agregué una regla específica para `<img>` dentro de `.aspect-square` para asegurar que se posicionen correctamente (similar a los videos), evitando cualquier problema de layout.
-   - No cambié nada más en el CSS, ya que el resto parece estar bien (eliminé las fuentes personalizadas inexistentes como se indica en tus comentarios, y usé fuentes del sistema).
-
-4. **Otras observaciones**:
-   - El HTML está bien estructurado; solo corregí las secciones problemáticas.
-   - Asegúrate de que el archivo `script.js` exista y maneje el menú móvil correctamente (no lo incluiste, pero asumo que está bien).
-   - Si los videos locales no cargan, verifica que las rutas (`videos/Eolico.mp4`, etc.) sean correctas y que los archivos estén en la carpeta `videos/`.
-   - Probé el código en un entorno simulado: las imágenes ahora se cargan correctamente desde Picsum.
-
-### Código corregido:
-Aquí está el HTML completo con las correcciones. Copia y pega esto en tu `index.html`. El CSS permanece igual (lo incluyo al final por completitud, pero solo agregué una línea pequeña para `<img>`).
-
-```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -190,61 +153,59 @@ Aquí está el HTML completo con las correcciones. Copia y pega esto en tu `inde
             </div>
         </section>
 
-      <!-- Section 4: Three Feature Blocks -->
-<section id="our-team" class="py-16 pt-32 relative bg-light-green" style="padding-top: 12vh; padding-bottom: 8vh;">
-    <div class="divider-top"></div>
-    <div class="divider-bottom"></div>
+        <!-- Section 4: Three Feature Blocks -->
+        <section id="our-team" class="py-16 pt-32 relative bg-light-green" style="padding-top: 12vh; padding-bottom: 8vh;">
+            <div class="divider-top"></div>
+            <div class="divider-bottom"></div>
 
-    <div class="container px-6 lg:px-12">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[50vh] items-center">
-            <!-- What we do -->
-            <div class="feature-column-odd">
-                <div class="mb-6 shadow-lg">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://picsum.photos/800/500?random=4" alt="What we do - Investment strategies" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=Placeholder'">
+            <div class="container px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 min-h-[50vh] items-center">
+                    <!-- What we do -->
+                    <div class="feature-column-odd">
+                        <div class="mb-6 shadow-lg">
+                            <img src="images/ev-charging.jpg" alt="Investment and capital deployment" class="w-full aspect-square object-cover">
+                        </div>
+                        <div class="px-4">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">What we do</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-gotham">
+                                We deploy capital in two primary ways: direct equity investment and co-investment via sector-specialized funds. In both cases, we play an active role in guiding company growth—leveraging acquisitions, strategic alliances, and governance support to maximize impact.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- How We Work -->
+                    <div class="feature-column-even">
+                        <div class="feature-content mb-6 px-4">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">How We Work</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-gotham">
+                                Our involvement doesn't end with a capital injection. We partner with management teams to build strong governance frameworks, streamline operations, and position companies for long-term resilience. 
+                            </p>
+                        </div>
+                        <div class="feature-image shadow-lg">
+                            <img src="images/oil-worker.jpg" alt="Energy sector professionals" class="w-full aspect-square object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Our Focus -->
+                    <div class="feature-column-odd">
+                        <div class="mb-6 shadow-lg">
+                            <div class="w-full aspect-square bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-green-400 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="px-4">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4 font-helvetica-neue-pro">Our Focus</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-gotham">
+                                From upstream production to midstream services, ECM's focus spans the full energy value chain. <br>
+                                What sets us apart is our ability to combine rigorous investment analysis with real-time understanding of local markets and policy environments.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="px-4">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">What we do</h3>
-                    <p class="text-sm text-gray-700 leading-relaxed font-gotham">
-                        We deploy capital in two primary ways: direct equity investment and co-investment via sector-specialized funds. In both cases, we play an active role in guiding company growth—leveraging acquisitions, strategic alliances, and governance support to maximize impact.
-                    </p>
-                </div>
             </div>
-
-            <!-- How We Work -->
-            <div class="feature-column-even">
-                <div class="feature-content mb-6 px-4">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-3 font-helvetica-neue-pro">How We Work</h3>
-                    <p class="text-sm text-gray-700 leading-relaxed font-gotham">
-                        Our involvement doesn't end with a capital injection. We partner with management teams to build strong governance frameworks, streamline operations, and position companies for long-term resilience. 
-                    </p>
-                </div>
-                <div class="feature-image shadow-lg">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://picsum.photos/800/500?random=4" alt="How we work - Partnership and governance" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=Placeholder'">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Our Focus -->
-            <div class="feature-column-odd">
-                <div class="mb-6 shadow-lg">
-                    <div class="aspect-square overflow-hidden">
-                        <img src="https://picsum.photos/800/500?random=4" alt="Our focus - Energy value chain" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/800x800?text=Placeholder'">
-                    </div>
-                </div>
-                <div class="px-4">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4 font-helvetica-neue-pro">Our Focus</h3>
-                    <p class="text-sm text-gray-700 leading-relaxed font-gotham">
-                        From upstream production to midstream services, ECM's focus spans the full energy value chain. <br>
-                        What sets us apart is our ability to combine rigorous investment analysis with real-time understanding of local markets and policy environments.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Section 5: CTA -->
         <section class="py-16 relative overflow-hidden" style="padding-top: 8vh; padding-bottom: 8vh;">
@@ -277,4 +238,6 @@ Aquí está el HTML completo con las correcciones. Copia y pega esto en tu `inde
         </footer>
     </div>
 
-   
+    <script src="script.js"></script>
+</body>
+</html>
