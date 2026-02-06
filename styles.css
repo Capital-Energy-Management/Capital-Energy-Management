@@ -562,7 +562,7 @@ body {
   
   /* Ajuste específico para la columna 3 - doble padding para bajar */
   .feature-column-odd:nth-child(3) {
-    padding-top: 28vh;
+    padding-top: 0;
   }
 }
 
