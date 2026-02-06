@@ -672,3 +672,44 @@ video[loop] {
 .aspect-square {
   padding-bottom: 100%; /* 1:1 aspect ratio */
 }/* Force rebuild */
+
+/* Section 4 - Team Cards - FIX */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.team-card-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-image img,
+.team-card-image video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card-content {
+  padding: 0 1rem;
+}
+
+/* Mobile: imagen arriba, texto abajo */
+@media (max-width: 1023px) {
+  .team-card {
+    flex-direction: column;
+  }
+}
+
+/* Desktop: columna 2 invierte el orden */
+@media (min-width: 1024px) {
+  .team-card:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
