@@ -614,6 +614,7 @@ section > video,
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   line-height: 0;
   font-size: 0;
+ clip-path: inset(0 round 0.5rem);
 }
 
 .team-card-image img {
@@ -630,10 +631,10 @@ section > video,
 
 /* Video Section 4 — */
 .team-card-image video {
-  width: 102%;
-  height: 102%;
-  margin-left: -1%;
-  margin-top: -1%;
+  width: 104%;
+  height: 104%;
+  margin-left: -2%;
+  margin-top: -2%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
